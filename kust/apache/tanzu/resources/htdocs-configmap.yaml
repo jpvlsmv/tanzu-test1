@@ -13,4 +13,6 @@ data:
         <h1>Hello from the tanzu override</h1>
       </body>
     </html>
+  page3.txt: |
+    This is added in the tanzu override
     
