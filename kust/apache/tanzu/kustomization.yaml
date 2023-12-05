@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-bases:
+commonLabels:
+  platform: tanzu-ipp
+resources:
   - ../../base
-patchesStrategicMerge:
   - resources/htdocs-configmap.yaml
