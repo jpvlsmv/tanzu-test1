@@ -2,8 +2,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: config-map
-  namespace: hello-static
+  name: htdocs-static
+  namespace: tanzu-helm-resources
 data:
   index.html: |
     <!DOCTYPE html>
