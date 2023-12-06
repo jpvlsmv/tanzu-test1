@@ -1,8 +1,9 @@
+# A resource to create fresh in the Tanzu environment
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: htdocs-static
+  name: htdocs-static-tanzu
   namespace: tanzu-helm-resources
 data:
   index.html: |
@@ -13,6 +14,4 @@ data:
         <h1>Hello from the tanzu override</h1>
       </body>
     </html>
-  page3.txt: |
-    This is added in the tanzu override
     

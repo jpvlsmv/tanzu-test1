@@ -13,10 +13,11 @@ resources:
 
 # Patches can be defined as YAML merge
 patches:
-  - patches/htdocs-configmap.yaml
+  - patches/htdocs-configmap.yaml # Overrides index.html and add page3.txt
 
 # Or patches defined in JSON/RFC-6902 style
-  - path: patches/htdocs-page2.json
+patchesJson6902:
+  - path: patches/htdocs-page2.json # Removes the page2.txt item
     target:
       name: htdocs-static
       kind: ConfigMap
