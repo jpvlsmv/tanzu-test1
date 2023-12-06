@@ -4,8 +4,7 @@ bases:
   - ../base
 
 helmCharts:
-  - releaseName: kustomized-apache
-    valuesInline:
-      replicaCount: 4
-      podLabels:
-        ipp: "demo1/prod"
+  - valuesInline:
+      config:
+        token: productionToken
+    releaseName: kustomized-cribl
