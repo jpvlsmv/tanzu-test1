@@ -5,5 +5,4 @@ metadata:
   name: htdocs-static
   namespace: tanzu-helm-resources
 data:
-  name: page2.txt
-    $patch: delete
+  page3.txt: This is a file added to the htdocs in Tanzu env
