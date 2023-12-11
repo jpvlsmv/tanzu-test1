@@ -1,0 +1,10 @@
+config:
+  host: cribl-wv-ldr-01.net.plm.eds.com
+  token: diswtokenvalue
+service:
+  type: LoadBalancer
+  loadBalancerIP: 0.0.0.0
+  ports:
+    - name: cribltcp
+      port: 10300
+      protocol: TCP
