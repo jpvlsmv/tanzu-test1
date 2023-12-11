@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../base
+- ../disw
+namePrefix: diswitip-
+namespace: jmoore
+commonLabels:
+  owner: jmoore/DI IT SW IP
+helmCharts:
+- name: logstream-workergroup
+  repo: https://criblio.github.io/helm-charts/
+  valuesMerge: merge
+  valuesFile: ../base/values-logstream-workergroup-base.yaml
+  valuesFile: ../disw/values-logstream-workergroup-disw.yaml
+  valuesInline:
+    config:
+      token: wilsonvilletoken
