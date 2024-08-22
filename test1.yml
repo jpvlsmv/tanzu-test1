@@ -1,0 +1,19 @@
+---
+- name: Say Hello World
+  hosts: all
+  tasks:
+    - name: Ping myself
+      ansible.builtin.ping:
+
+    - name: Print a message
+      ansible.builtin.debug:
+        msg: Hello World
+
+    - name: Make a file to show whats happening
+      ansible.builtin.copy:
+        dest: /tmp/ansible-created-file
+        force: true
+        content: |
+          Ansible-created file from playbook.
+          The selected color is {{ color | default("unspecified") }}
+          This book ran when the system was up for {{ansible_facts['uptime_seconds']}}
